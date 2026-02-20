@@ -5,7 +5,7 @@ export default function Dashboard() {
   const [user, setUser] = useState(null);
 
   const load = async () => {
-    const res = await axios.get("http://localhost:5000/auth/me", {
+    const res = await axios.get("https://login-backend-etnn.onrender.com/auth/me", {
       headers: { Authorization: localStorage.getItem("token") }
     });
     setUser(res.data);

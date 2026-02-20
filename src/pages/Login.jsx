@@ -7,7 +7,7 @@ export default function Login() {
   const nav = useNavigate();
 
   const submit = async () => {
-    const res = await axios.post("http://localhost:5000/auth/login", form);
+    const res = await axios.post("https://login-backend-etnn.onrender.com/auth/login", form);
     if (res.data.token) {
       localStorage.setItem("token", res.data.token);
       nav("/dashboard");
